@@ -27,9 +27,10 @@ public class ControllerMed
 	MedSpecialtyRepository MSRepo;
 	
 	@GetMapping("/")
-	public void entrei()
+	public String entrei()
 	{
 		System.out.println("entrei");
+		return "entrei";
 	}
 	
 	@GetMapping("/MedSpec")
@@ -44,7 +45,7 @@ public class ControllerMed
 		return MSRepo.getById(id);
 	}
 	
-	@DeleteMapping("/MedSpec/delete{id}")
+	@DeleteMapping("/MedSpec/delete/{id}")
 	public void DeleteSpecialtyByID(@PathVariable Long id)
 	{
 		MSRepo.deleteById(id);
