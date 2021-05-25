@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "MedSpecialty")
+@Table(name = "MedDoc")
 public class MedDoc 
 {
 	
